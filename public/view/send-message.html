@@ -1,0 +1,29 @@
+<h4>{{contact.name}} - {{contact.number}}</h4>
+
+<div class="form-group">
+	<button class="btn btn-default" ng-click="generateOTP()">Generate OTP</button>
+	<p>or</p>
+		
+</div>
+
+<form ng-submit="submit()">	
+	<div class="form-group">
+		<label for="txtMsg">Write message</label>
+		<div class="col">
+			<textarea class="form-control" rows="10" name="txtMsg" placeholder="Type a message to send to {{ contact.name }}" ng-model ="msgbody"></textarea>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<input type="submit" ng-disabled="msgbody === '' || loading" class="btn btn-primary" value="Send message">
+	</div>
+	
+	<div ng-if="loading === true">
+		Sending message..
+	</div>
+	
+	<div ng-if="flashtext !== ''" class="alert" ng-class="{ 'alert-success': success, 'alert-danger': !success }">
+		<p>{{ flashtext }}</p>
+	</div>
+	
+</form>

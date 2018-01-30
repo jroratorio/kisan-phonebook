@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html ng-app="PhoneBookApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Contacts App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="header">
+				<ul class="nav nav-pills pull-right" data-ng-controller="NavbarController">
+					<li data-ng-class="{'active':getClass('/show-all')}"><a href="#/show-all">All Contacts</a></li>
+					<li data-ng-class="{'active':getClass('/add-contact')}"><a href="#/add-contact">Add Contact</a></li>
+				</ul>
+				
+				<h3>Phone Book</h3>
+			</div>
+			<hr>
+			
+			<div ng-view></div>
+
+			<hr>
+			<div class="footer">
+				<p>Phonebook demo app</p>
+				<p>Source code</p>
+			</div>
+
+		</div> 
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/controllers/ctrlNavbar.js"></script>
+        <script src="/js/controllers/ctrlContacts.js"></script>
+        <script src="/js/controllers/ctrlEdit.js"></script>
+        <script src="/js/controllers/ctrlView.js"></script>
+        <script src="/js/controllers/ctrlAdd.js"></script>
+        <script src="/js/controllers/ctrlDelete.js"></script>
+		<script src="/js/controllers/ctrlSendMessage.js"></script>
+		
+	</body>
+</html>

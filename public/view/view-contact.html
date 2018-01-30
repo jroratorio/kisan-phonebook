@@ -1,0 +1,30 @@
+<h4>Contact details</h4>
+
+<div class="panel panel-default" >
+	<div class="panel-heading">{{ contact.name }}</div>
+	<div class="panel-body">
+		<address>
+			<strong>Phone</strong><br>
+			{{ contact.number }}<br><br>
+			<strong>Email</strong><br>
+			<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+		</address>
+		
+		<a href="#/contacts" class="btn btn-primary">Ok</a>
+	</div>
+	
+	<div class="panel-body">
+		<table class="table ksn-table">
+			<tr class="active">
+				<th>Message</th>
+				<th>Send time</th>
+			</tr>
+			<tr ng-repeat="msg in contact.messages">
+				<td>{{ msg.body }}</td>
+				<td>{{ msg.date }}</td>
+			</tr>
+		</table>
+	</div>
+	
+</div>
+

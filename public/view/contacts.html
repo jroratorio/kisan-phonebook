@@ -1,0 +1,38 @@
+<h4>View all contacts</h4>
+<form class="form-inline" role="form">
+
+	<h5>Search contact</h5>
+	<div class="form-group">
+		<label class="sr-only" for="txtsearchbox">Enter Name</label>
+		<input type="text" class="form-control" id="txtsearchbox" placeholder="Enter Name" ng-model="searchText.name" ng-minlength="2">
+	</div>
+</form>
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th data-ng-click="setOrder('name')" style="cursor:pointer">Name</th>
+				<th>Number</th>
+				<th>Email</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr ng-show="contacts.length" ng-repeat="contact in contacts | filter:searchText | orderBy:orderby:reverse">
+				<td><a href="#/view-contact/{{ accessors.getId(contact) }}">{{ contact.name }}</a></td>
+				<td>{{ contact.number }}</td>
+				<td>{{ contact.email }}</td>
+				<td>
+                    <div class="button-group">
+						<a ng-href="/#/send-message/{{ accessors.getId(contact) }}" class="btn btn-warning">Send Message</a>
+						<a ng-href="/#/edit-contact/{{ accessors.getId(contact) }}" class="btn btn-warning">Edit</a>
+						<a ng-href="/#/delete-contact/{{ accessors.getId(contact) }}" class="btn btn-danger">Delete</a>
+					</div>
+                </td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>

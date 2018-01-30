@@ -1,0 +1,9 @@
+{
+    "dbURI": "mongodb://jroratorio:123456@ds119018.mlab.com:19018/kisan-phonebook",
+    "twilio": {
+        "sid": "ACbd1ca4b4b3edee6d1860f6203669f6f7",
+        "authToken": "891b698160bb27d95b582ead64d175b0",
+        "number": "+13059307718"        
+    },
+    "siteURI": "http://localhost:3000"
+}

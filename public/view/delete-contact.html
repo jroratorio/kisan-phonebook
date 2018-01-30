@@ -1,0 +1,11 @@
+<div class="panel panel-default" >
+	<div class="panel-heading">Delete Contact</div>
+	<div class="panel-body">
+		<p>Are you sure you want to delete this contact {{ contact.name }}?</p>
+		
+		 <div class="form-group">
+            <input type="submit" class="btn btn-primary" ng-click="deleteContact()" value="Yes">
+            <button ng-click="back()" type="button" class="btn btn-primary">No</button>
+        </div>
+	</div>
+</div>
