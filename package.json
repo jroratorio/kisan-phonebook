@@ -4,8 +4,7 @@
   "description": "Online phone book app to store your contacts details",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "server": "node ./bin/server"
+    "start": "node bin\/server.js"    
   },
   "dependencies": {
     "axios": "^0.17.1",
