@@ -7,6 +7,7 @@ var config = require('./config');
 
 //initialize mongoose schemas
 require('./models/model');
+
 var index = require('./routes/index');
 var api = require('./routes/api');
 
